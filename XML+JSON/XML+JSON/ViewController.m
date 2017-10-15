@@ -88,7 +88,7 @@
 // 准备解析当前节点
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict{
     
-//    当有节点的时候呢
+//    当节点有属性的时候呢
     
 //     b. <info name = "我是XML字典"></info>
 
@@ -105,11 +105,13 @@
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
     
 //    a. <info>我是XML字符串</info>
+//    c. <info><name>含有多个标签</name></info>
+//    d. <info><name>含有多个标签</name><name>含有多个标签</name></info>
 
 //    _textView.text = [_textView.text stringByAppendingString:@"获取内容："];
 //
 //    _textView.text = [_textView.text stringByAppendingString:string];
-
+   
     
     
 }
